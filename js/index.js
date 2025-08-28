@@ -98,7 +98,7 @@ $(document).ready(function () {
 $(function () {
   $(".Counter").counterUp({
     delay: 20,
-    time: 4000,
+    time: 3000,
   });
 });
 /* Clients -owl carosuel*/
