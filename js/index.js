@@ -127,8 +127,10 @@ $(function () {
       $("#formMsg")
         .text("Thank You For Contacting!")
         .css("color", "green")
-        .text("Thank You For Contacting.!")
-        .fadeOut(400);
+        .text(" Send Message  Successfully.")
+        .delay(1000)
+
+        .fadeOut();
       $("#contactForm")[0].reset();
     } else {
       $("#formMsg").text("Please fill all fields.").css("color", "red");

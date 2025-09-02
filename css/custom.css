@@ -956,28 +956,30 @@ ul.stages li span {
   border: 1px solid;
 }
 #footer {
-  background-color: rgba(35, 153, 153);
-  color: #fff;
-  padding: 70px;
-  margin: 0;
+  background: url(../images/foot.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#footer .content-box-md {
+  background: rgb(0, 0, 0, 0.9);
 }
 #footer p {
+  color: #fff;
   font-weight: 400;
   padding: 0;
-  margin-top: -35px;
 }
 #footer p span {
-  color: #ffbc02;
+  color: transparent;
+  background: linear-gradient(300deg, rgba(44, 255, 255, 0.8), #ffbc02);
+  background-clip: text;
 }
-#footer ul {
-  display: flex;
-  justify-content: end;
-}
+
 #footer ul li {
   display: inline-block;
   list-style: none;
-
-  margin-right: 30px;
+  margin-right: 20px;
 }
 #footer ul li a {
   color: #fff;
@@ -986,10 +988,8 @@ ul.stages li span {
 #footer ul li.bo {
   font-size: 20px;
   background-color: rgb(0, 132, 255);
-
   padding: 4px 4px;
-
-  opacity: 0.9;
+  opacity: 0.8;
   transition: all 0.4s ease;
 }
 #footer ul li.in {
@@ -1004,17 +1004,14 @@ ul.stages li span {
   );
 
   padding: 4px 4px;
-
-  opacity: 0.9;
+  opacity: 0.8;
   transition: all 0.4s ease;
 }
 #footer ul li.tw {
   font-size: 20px;
   background-color: rgb(0, 132, 255);
-
   padding: 4px 4px;
-
-  opacity: 0.9;
+  opacity: 0.8;
   transition: all 0.4s ease;
 }
 #footer ul li.ln {
@@ -1023,33 +1020,31 @@ ul.stages li span {
 
   padding: 4px 4px;
 
-  opacity: 0.9;
+  opacity: 0.8;
   transition: all 0.4s ease;
 }
 #footer ul li.ln:hover {
-  opacity: 1.5;
+  opacity: 1;
 }
 #footer ul li.bo:hover {
-  opacity: 1.5;
+  opacity: 1;
 }
 
 #footer ul li.tw:hover {
-  opacity: 1.5;
+  opacity: 1;
 }
 #footer ul li.in:hover {
-  opacity: 1.5;
+  opacity: 1;
 }
 #footer .cre span {
-  background: linear-gradient(300deg, rgb(29, 255, 255), #ffbc02);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #ffbc02;
 }
 #footer .fon {
-  color: #ffbc02;
+  color: rgb(23, 216, 216);
+  text-transform: uppercase;
   font-size: 30px;
-  margin-bottom: 25px;
 }
+
 /* nav bar */
 .navbar {
   padding: 10px 20px;
@@ -1104,4 +1099,7 @@ ul.navbar-nav .nav-link.active {
   border-radius: 0;
   border: none;
   background-color: #ffffff60;
+}
+.col-md-6 .em {
+  margin-left: 20%;
 }
