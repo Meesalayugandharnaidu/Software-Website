@@ -879,7 +879,7 @@ ul.stages li span {
   text-transform: uppercase;
   font-size: 15px;
   margin: 10px 0;
-  border-bottom: 1px solid;
+
   width: 100%;
 }
 .blog img {
@@ -960,6 +960,8 @@ ul.stages li span {
   border: 1px solid;
 }
 #footer {
+  margin: 0;
+  padding: 0;
   background: url(../images/foot.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -968,6 +970,8 @@ ul.stages li span {
 }
 #footer .content-box-md {
   background: rgb(0, 0, 0, 0.8);
+  padding: 0;
+  margin: 0;
 }
 #footer p {
   color: #fff;
@@ -1047,6 +1051,11 @@ ul.stages li span {
   color: rgb(23, 216, 216);
   text-transform: uppercase;
   font-size: 30px;
+  margin-top: 15px;
+}
+.foot a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* nav bar */
