@@ -391,6 +391,10 @@ ul.social li a:hover {
   margin: 20px 0px;
   color: #ffbc02;
 }
+#quote h2 span {
+  color: rgba(12, 211, 211, 0.959);
+  font-size: 35px;
+}
 
 /* Services 01 */
 .horizontal-heading {
@@ -963,7 +967,7 @@ ul.stages li span {
   background-size: cover;
 }
 #footer .content-box-md {
-  background: rgb(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0, 0.8);
 }
 #footer p {
   color: #fff;
@@ -1064,7 +1068,7 @@ ul.navbar-nav li a:focus {
 .nav-top-white {
   background-color: #fff;
   padding: 10px;
-  box-shadow: 0px 7px 10px -9px rgb(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 8px -9px rgb(0, 0, 0, 0.7);
 }
 .nav-top-white ul.navbar-nav li a {
   color: rgba(35, 153, 153);

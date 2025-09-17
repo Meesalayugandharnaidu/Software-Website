@@ -113,31 +113,6 @@ $(document).ready(function () {
   });
 });
 
-/* contact from */
-$(function () {
-  $("#contactForm").on("submit", function (e) {
-    e.preventDefault();
-    let name = $("#name").val().trim();
-    let email = $("#email").val().trim();
-    let number = $("#number").val().trim();
-    let sub = $("#sub").val().trim();
-    let message = $("#message").val().trim();
-
-    if (name && email && number && sub && message) {
-      $("#formMsg")
-        .text("Thank You For Contacting!")
-        .css("color", "green")
-        .text(" Send Message  Successfully.")
-        .delay(1000)
-
-        .fadeOut();
-      $("#contactForm")[0].reset();
-    } else {
-      $("#formMsg").text("Please fill all fields.").css("color", "red");
-    }
-  });
-});
-
 /* nav-bar */
 $(function () {
   navbarwhite();
@@ -172,3 +147,46 @@ $(function () {
     );
   });
 });
+/* nav menu-collapse */
+const navItems = document.querySelectorAll(".nav-item");
+const navMenu = document.querySelector("#navMenu");
+navItems.forEach((li) => {
+  li.addEventListener("click", () => {
+    let ww = window.innerWidth;
+    if (ww < 992) {
+      let bsToggle = new bootstrap.Collapse(navMenu);
+      bsToggle.toggle();
+    }
+  });
+});
+
+/* contact from */
+
+/* contact form submission */
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      number: document.getElementById("number").value,
+      subject: document.getElementById("sub").value,
+      message: document.getElementById("message").value,
+    };
+
+    try {
+      let response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      let result = await response.json();
+      document.getElementById("formMsg").innerText = result.message;
+      document.getElementById("contactForm").reset();
+    } catch (err) {
+      document.getElementById("formMsg").innerText = "Error sending data!";
+    }
+  });
